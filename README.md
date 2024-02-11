@@ -42,3 +42,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     # ngOnInit => Seulement dans le père AppComponent, injecter la donnée
     # constructor(private accountService : AccountService) => Injection à faire dans toutes les classes voulant utiliser le service
 
+## 115. Injecting Services into Services
+    Il faudra penser à ajouter le décorateur @Injectable() au service dasn lequel on utilise un autre service

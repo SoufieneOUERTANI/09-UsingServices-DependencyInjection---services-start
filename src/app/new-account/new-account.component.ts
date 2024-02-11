@@ -7,7 +7,7 @@ import { AccountService } from '../accounts.service';
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
   // Ne pas rajouter ", AccountService" ici car sinon ça override celle qui vient du AppComponent
-  providers:[LoggingService]
+  // providers:[LoggingService]
 })
 export class NewAccountComponent {
   // @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
@@ -21,6 +21,6 @@ export class NewAccountComponent {
     // });
     this.accountService.addAccount(accountName, accountStatus);
     // console.log('A server status changed, new status: ' + accountStatus);
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
   }
 }

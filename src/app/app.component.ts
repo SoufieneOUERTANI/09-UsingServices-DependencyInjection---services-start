@@ -5,8 +5,7 @@ import { AccountService } from './accounts.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  // provider principal de l'instance de "AccountService", déclarer le provider juste ici
-  providers: [AccountService]
+  providers: []
 })
 export class AppComponent {
 

@@ -7,7 +7,7 @@ import { AccountService } from '../accounts.service';
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
   // Ne pas rajouter ", AccountService" ici car sinon ça override celle qui vient du AppComponent
-  providers:[LoggingService]
+  // providers:[LoggingService]
 })
 export class AccountComponent {
   @Input() account: {name: string, status: string};
@@ -20,6 +20,6 @@ export class AccountComponent {
     // this.statusChanged.emit({id: this.id, newStatus: status});
     this.accountService.updateAccount(this.id, status);
     // console.log('A server status changed, new status: ' + status);
-    this.loggingService.logStatusChange(status);
+    // this.loggingService.logStatusChange(status);
   }
 }
