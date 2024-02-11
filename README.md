@@ -44,3 +44,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 115. Injecting Services into Services
     Il faudra penser à ajouter le décorateur @Injectable() au service dasn lequel on utilise un autre service
+
+## 116. Using Services for Cross-Component Communication
+    Communication entre deux composants à travers un service partagé
