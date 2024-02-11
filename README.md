@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## 112. Creating a Data Service
+    Simple classe à :
+    - Créer => accounts.service.ts 
+    - Déclarer dans *providers:* => seulement dans le père
+    - Initialiser la donnée dans ngOnInit => seulement dans le père
+    - A injecter dans le construteur => Partout où on veut l'utiliser
+    - A mettre à jour ; Partout où ell est injectée(dans le constructeur)
+## 113. Understanding the Hierarchical Injector
+    Un service s'il est daclaré dans *providers:*, il est hérité par tous les fils. Mais il doit tout de meme etre injecté dans le fils par la déclaration dans le construteur de ce fils. 
+    Toute fois, s'il est en meme temps déclaré dans *providers:* dans un des fils, la valeur de ce service est ecrasé par une nouvelle instance qui n'est plus celle du père.   
+## 114. How many Instances of Service Should It Be?
+    # providers: [AccountService] => Seulement dans le père AppComponent, et le service sera hérité par toutes clases child 
+    # ngOnInit => Seulement dans le père AppComponent, injecter la donnée
+    # constructor(private accountService : AccountService) => Injection à faire dans toutes les classes voulant utiliser le service
+
